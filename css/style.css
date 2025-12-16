@@ -1,0 +1,200 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+    font-family: Helvetica, sans-serif, "Microsoft JhengHei";
+}
+
+.join-us-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.join-us-background {
+    width: 100%;
+    height: 600px;
+    background: url("https://images.unsplash.com/photo-1554995207-c18c203602cb") center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.6s ease;
+    position: relative;
+    z-index: 0;
+}
+
+.join-us-background:hover {
+    transform: scale(1.12);
+}
+
+.join-us-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0.6;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.join-us-background:hover .join-us-overlay {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.join-us-content {
+    width: 100%;
+    color: white;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.join-us-text {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.join-us-subtitle {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #e5e1da;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.join-us-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #fdfcf9;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+.join-us-description {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.8;
+    margin: 0 auto 35px;
+    max-width: 700px;
+    color: rgba(255, 255, 255, 0.85); /* 浅灰米白 */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.join-us-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.join-us-btn:hover {
+    background: white;
+    color: #333;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+}
+
+
+.customer-service-container {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+    background-color: white;
+    padding: 12px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+.customer-service-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.customer-service-btn:hover {
+    transform: scale(1.1);
+    background-color: #e9ecef;
+}
+
+.customer-service-btn i {
+    font-size: 20px;
+}
+
+.qrcode-popup {
+    position: absolute;
+    left: -150px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.tooltip-popup {
+    position: absolute;
+    right: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10000;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.qrcode-popup img {
+    width: 120px;
+    height: 120px;
+    display: block;
+}
+.customer-service-btn:nth-child(1) i { color: #2dc100; }  /* 微信绿色 */
+.customer-service-btn:nth-child(2) i { color: #25d366; }  /* WhatsApp绿色 */
+.customer-service-btn:nth-child(3) i { color: #ea4335; }  /* 邮箱红色 */
